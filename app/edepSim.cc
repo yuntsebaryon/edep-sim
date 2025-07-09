@@ -9,6 +9,7 @@
 
 #include "globals.hh"
 
+#include <getopt.h>
 #include <iostream>
 #include <fstream>
 #include <csignal>
