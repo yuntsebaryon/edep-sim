@@ -8,7 +8,7 @@
 #include "EDepSimArbElecField.hh"
 #include "EDepSimArbMagField.hh"
 
-#define BUILD_CAPTAIN
+#undef BUILD_CAPTAIN
 #ifdef BUILD_CAPTAIN
 #include "captain/CaptWorldBuilder.hh"
 #endif
@@ -47,7 +47,7 @@
 EDepSim::UserDetectorConstruction::UserDetectorConstruction() {
     fDetectorMessenger = new EDepSim::DetectorMessenger(this);
     fWorldBuilder = NULL;
-#define BUILD_CAPTAIN
+#undef BUILD_CAPTAIN
 #ifdef BUILD_CAPTAIN
     fWorldBuilder = new CaptWorldBuilder("/Captain",this);
 #endif
